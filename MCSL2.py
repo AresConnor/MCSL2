@@ -13,12 +13,10 @@
 """
 Main entry.
 """
-try:
-    import importlib.util
-    profiler = importlib.util.find_spec("profiler")
-    profiler.installProfilerCallback()
-except:
-    pass
+
+import profiler
+profiler.installProfilerCallback()
+
 
 import sys
 from PyQt5.QtCore import Qt, QLocale, QObject, QEvent
