@@ -1,5 +1,6 @@
 def installProfilerCallback():
     import sys
+    import traceback
     from typing import Any
     from types import FrameType
     def _(frame: FrameType, event: str, arg: Any):
@@ -10,6 +11,6 @@ def installProfilerCallback():
             fn_name = code.co_name
             print(f"{event:<10} | {filename}:{lineno} => {fn_name}({arg})")
         except:
-            pass
+            traceback.print_exc()
 
     sys.setprofile(_)
