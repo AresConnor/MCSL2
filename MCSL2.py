@@ -13,8 +13,12 @@
 """
 Main entry.
 """
-import profiler
-profiler.installProfilerCallback()
+try:
+    import importlib.util
+    profiler = importlib.util.find_spec("profiler")
+    profiler.installProfilerCallback()
+except:
+    pass
 
 import sys
 from PyQt5.QtCore import Qt, QLocale, QObject, QEvent
