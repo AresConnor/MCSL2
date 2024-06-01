@@ -13,9 +13,9 @@
 """
 Main entry.
 """
-import MCSL2Lib.utils
+import profiler
+profiler.installProfilerCallback()
 
-MCSL2Lib.utils.installProfilerCallback()
 import sys
 from PyQt5.QtCore import Qt, QLocale, QObject, QEvent
 from PyQt5.QtWidgets import QApplication
