@@ -15,7 +15,7 @@ Main entry.
 """
 
 import profiler
-profiler.installProfilerCallback()
+# profiler.installProfilerCallback()
 
 
 import sys

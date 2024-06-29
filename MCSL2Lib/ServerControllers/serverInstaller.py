@@ -32,7 +32,7 @@ from PyQt5.QtCore import (
 from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 from MCSL2Lib.ProgramControllers.settingsController import cfg
-from MCSL2Lib.ServerControllers.forge import ForgeInstallThread
+#from MCSL2Lib.ServerControllers.forge import ForgeInstallThread
 from MCSL2Lib.utils import MCSL2Logger, ServicesUrl, readFile, writeFile
 from MCSL2Lib.variables import ConfigureServerVariables, EditServerVariables
 
@@ -387,7 +387,7 @@ class ForgeInstaller(Installer):
             self.installFinished.emit(False)
             return
 
-        self.worker = ForgeInstallThread(self.file, self.cwd, self.java)
+        # self.worker = ForgeInstallThread(self.file, self.cwd, self.java)
 
         self.worker.output.connect(
             lambda msg: self.installerLogOutput.emit(
